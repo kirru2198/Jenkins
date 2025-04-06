@@ -21,7 +21,7 @@ First, we have created 3 instances: Master (Green terminal), Slave-1 (Orange Ter
    - SSH into the Master instance and run the following commands to install Jenkins:
      ```bash
      sudo apt update
-     sudo apt install openjdk-11-jdk
+     sudo apt install openjdk-17-jdk
      wget -q -O - https://pkg.jenkins.io/keys/jenkins.io.key | sudo apt-key add -
      echo "deb http://pkg.jenkins.io/debian/ stable main" | sudo tee -a /etc/apt/sources.list.d/jenkins.list
      sudo apt update

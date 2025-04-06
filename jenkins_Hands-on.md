@@ -8,9 +8,6 @@ Hands-On: Jenkins
 First, we have created 3 instances: Master (Green terminal), Slave-1 (Orange Terminal) and Slave-2 (Blue Terminal) on EC2 Server. And then we have installed Jenkins on the Master Machine. Now Let us set up the Jenkins Master-Slave Cluster.
 
 ---
-Sure! Below is the modified version of your Jenkins setup with relevant commands and expected outputs:
-
----
 
 ## Hands-On: Jenkins
 

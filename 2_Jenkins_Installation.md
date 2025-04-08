@@ -33,7 +33,7 @@ This guide walks you through the steps to set up Jenkins on an AWS EC2 instance.
       ```
     - If Java is not installed, you can install it using the following command:
       ```bash
-      sudo apt-get install openjdk-11-jdk
+      sudo apt-get install openjdk-17-jdk
       ```
 
 3. **Update System Repositories**:

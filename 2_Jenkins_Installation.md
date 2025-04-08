@@ -96,8 +96,16 @@ This guide walks you through the steps to set up Jenkins on an AWS EC2 instance.
 
 4. **Complete the Setup Wizard**:
     - Copy the password and paste it into the setup wizard in the web interface.
-    - Install the suggested plugins (it may take 5-7 minutes).
-    - Create an admin user to finish the setup.
+    - Install Suggested Plugins: After unlocking Jenkins, you will be prompted to install suggested plugins. This process may take 5-7 minutes. The suggested plugins include essential tools that help Jenkins function optimally.
+    - Create an Admin User: After the plugins are installed, you’ll be asked to create an admin user. This user will have full access to Jenkins. You can enter any username and password, e.g.,:
+  
+Username: admin
+
+Password: your-password
+
+Email: admin@example.com
+
+Complete Setup: After creating the admin user, Jenkins will be ready to use, and you'll be directed to the Jenkins dashboard.
 
 ---
 

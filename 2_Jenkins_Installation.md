@@ -152,3 +152,7 @@ If you want to create an Amazon Machine Image (AMI) to preserve your configurati
 ### Conclusion
 
 Once Jenkins is installed and running, you're ready to create and manage Jenkins pipelines. Keep in mind that if you stop and restart your EC2 instance, the IP address may change, so update your browser URL accordingly.
+
+Now that Jenkins is set up and running, you can begin automating the CI/CD pipeline with Jenkins. In future sessions, we'll dive deeper into configuring Jenkins for specific use cases, integrating it with version control systems like Git, and setting up pipelines for your projects.
+
+

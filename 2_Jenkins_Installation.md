@@ -45,16 +45,17 @@ This guide walks you through the steps to set up Jenkins on an AWS EC2 instance.
 4. **Add the Jenkins Repository**:
     - Download and install the Jenkins repository key:
       ```bash
-      wget -q -O - https://pkg.jenkins.io/jenkins.io.key | sudo apt-key add -
+      sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
       ```
     - Add the Jenkins repository to your system:
       ```bash
-      sudo sh -c 'echo deb http://pkg.jenkins.io/debian/ stable main > /etc/apt/sources.list.d/jenkins.list'
+      echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
       ```
 
 5. **Install Jenkins**:
     - Run the following command to install Jenkins:
       ```bash
+      sudo apt-get update
       sudo apt-get install jenkins
       ```
 

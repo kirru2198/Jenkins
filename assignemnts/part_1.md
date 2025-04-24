@@ -58,6 +58,8 @@
                │ (e.g., Build, Test, Deploy)│
                └────────────────────────────┘
 
+![image](https://github.com/user-attachments/assets/afd0c426-4d03-45ec-bd56-7dd969474267)
+
 ---
 
 ## 🚀 Launching 2 EC2 Instances

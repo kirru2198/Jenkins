@@ -580,9 +580,134 @@ jenkins-aws/
 
 ---
 
-## 🙋 Common Questions
+# 📘 Jenkins Assignment #1 – Freestyle Job with Git Integration
 
-**Q: What is the difference between GitHub and lab environments?**  
-A: GitHub is a cloud-based source code repository used for collaboration. A "lab" is usually a sandbox environment (often provided by training platforms) to practice hands-on tasks in a safe, isolated system.
+This assignment involves creating a **freestyle project** (Job) in Jenkins, pulling code from a GitHub repository, and verifying its execution on a **slave node** (agent) instead of the master.
 
 ---
+
+## 🧱 Objective
+
+- Create a **freestyle Jenkins job**.
+- Integrate it with a **GitHub repository**.
+- Configure it to run on a **Jenkins slave node**.
+- Ensure the build creates a **workspace directory** on the slave with the correct content.
+
+---
+
+## 🧰 Prerequisites
+
+- Jenkins is installed and running.
+- At least one **slave node** (agent) is configured.
+- A **GitHub repository** is available with the project files.
+- SSH credentials or GitHub token are set up in Jenkins.
+
+---
+
+## 📝 Step-by-Step Instructions
+
+### 1. Go to Jenkins Dashboard
+
+- Visit your Jenkins web UI.
+- On the top left, click **"New Item"**.
+
+---
+
+### 2. Create a Freestyle Project
+
+- Enter a name, e.g., `job1`.
+- Select **Freestyle Project**.
+- Click **OK**.
+
+---
+
+### 3. General Configuration
+
+- (Optional) Check **GitHub project** and enter the **GitHub repo URL**.
+- Check **Restrict where this project can be run**.
+  - Enter the **label** of the slave node (e.g., `node1`).
+
+---
+
+### 4. Source Code Management
+
+- Select **Git**.
+- Enter the Git repository URL.
+- Add/select credentials (e.g., SSH key or token).
+- In **Branch to build**, use:  
+  ```
+  */develop
+  ```
+  _(As per assignment requirement.)_
+
+---
+
+### 5. Build Triggers
+
+- Select:
+  - **GitHub hook trigger for GITScm polling**  
+    _(Triggers build on GitHub webhook push.)_
+
+---
+
+### 6. Save and Build
+
+- Click **Save**.
+- Go to the job dashboard.
+- Click **"Build Now"**.
+- Confirm that a build is triggered.
+
+---
+
+## 🖥️ Verifying on Slave Node
+
+Once the job is executed:
+
+1. **SSH into the slave machine**.
+2. Navigate to Jenkins home directory:
+   ```bash
+   cd ~/Jenkins
+   ```
+3. Check for `workspace` directory:
+   ```bash
+   ls
+   ```
+   You should see a `workspace/` folder now.
+
+4. Go inside:
+   ```bash
+   cd workspace/job1
+   ls
+   ```
+   You should see the files from your GitHub repo (from `develop` branch) here.
+
+---
+
+## 📂 Extra Debugging Info
+
+If you do **not** see the workspace:
+
+- Make sure the job is **restricted to the correct slave node** under "Restrict where this project can be run".
+- Ensure the **build is completed successfully**.
+- Rebuild after correcting any misconfigurations.
+
+---
+
+## 📎 Notes
+
+- Files like `.git` and temporary `.tmp` files might appear in the directory — these are expected.
+- Use `ls -la` to see hidden and system files.
+
+---
+
+## ✅ Conclusion
+
+You’ve now successfully:
+
+- Created a Jenkins freestyle job.
+- Integrated it with GitHub.
+- Ran it on a slave node.
+- Verified the presence of build output in the Jenkins workspace on the slave.
+
+---
+

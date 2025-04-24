@@ -315,4 +315,121 @@ From the Installed tab, you can:
 
 ---
 
+# 🖥️ Jenkins – Create and Configure a Node (Agent)
+
+In Jenkins, a **Node** (or agent) refers to a separate machine or instance used to run jobs independently from the master (controller). This setup helps in distributing the workload and managing builds efficiently.
+
+---
+
+## 🚀 Step-by-Step Guide: Create a Jenkins Node (Permanent Agent)
+
+---
+
+### 🔹 Step 1: Go to "Manage Jenkins"
+
+- From the Jenkins **Dashboard**, navigate to:
+  ```text
+  Manage Jenkins → Nodes 
+  ```
+
+- You will see a **built-in node** listed, which is Jenkins' own controller node.
+
+---
+
+### 🔹 Step 2: Create a New Node
+
+1. Click on `New Node`.
+2. Enter a **node name** – for example: `node1`.
+3. Choose **Permanent Agent** as the node type.
+   - 📌 *Permanent agents* are machines that are permanently attached to Jenkins and run jobs as assigned.
+   - Jenkins doesn’t provide high-level integration natively; this is a manual integration method.
+4. Click **OK** to proceed to configuration.
+
+---
+
+### 🔹 Step 3: Node Configuration
+
+Here's the full configuration breakdown:
+
+| Field                     | Value / Description                                                                 |
+|--------------------------|--------------------------------------------------------------------------------------|
+| **Description**          | *(Optional)* e.g., `This node is for Assignment 1`                                  |
+| **# of Executors**       | 1 (or as needed – defines how many jobs this node can run concurrently)              |
+| **Remote root directory**| `/home/ubuntu/jenkins/` – Path to Jenkins home on the agent system                  |
+| **Usage**                | "Use this node as much as possible"                                                 |
+| **Launch method**        | `Launch agents via SSH`                                                             |
+| **Host**                 | Private IP of your slave machine (e.g., AWS EC2 instance)                           |
+
+---
+
+### 🔹 Step 4: Add SSH Credentials
+
+Since we are connecting via SSH, we need to add proper credentials.
+
+1. Click on `Add → Jenkins` under **Credentials**.
+2. Select the following:
+
+   | Field         | Value |
+   |---------------|-------|
+   | **Kind**      | SSH Username with Private Key |
+   | **Username**  | `ubuntu` (for Ubuntu AMI) |
+   | **Private Key** | Select: `Enter directly`, then paste your `.pem` key contents |
+   | **Description** | *(Optional)* For identification |
+
+3. Save the credential.
+
+✅ Once added, select the newly added credential (e.g., “ubuntu”) from the dropdown.
+
+---
+
+### 🔹 Step 5: Host Key Verification Strategy
+
+- Select:  
+  ```text
+  Non verifying verification strategy
+  ```
+
+This avoids failures due to unknown host key issues, especially in dynamic environments like cloud VMs.
+
+---
+
+### 🔹 Step 6: Final Settings
+
+- **Availability**:  
+  Select:  
+  ```text
+  Keep this agent online as much as possible
+  ```
+
+- Click **Save** to complete the node creation.
+
+---
+
+## ✅ Verify Node Status
+
+1. After saving, Jenkins attempts to connect to the node.
+2. The node will appear in the dashboard under the list of agents.
+3. Look for:
+   - **Online** status ✔️
+   - Green indicator next to the node name
+   - If any issue occurs, it will show a red ❌ or say “Offline”
+
+4. You can manually refresh by clicking `Refresh Status`.
+
+---
+
+## 🟢 Success!
+
+Your node (`node1`) is now **successfully created and online**. Jenkins can now run jobs on this agent.
+
+---
+
+## 📌 Notes
+
+- Make sure the **.pem** file is correct and accessible.
+- The remote machine (agent) should have **Java installed** and the right **permissions set**.
+- If a node goes **Offline**, check the logs for connection or key issues.
+
+---
+
 

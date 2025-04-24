@@ -432,4 +432,155 @@ Your node (`node1`) is now **successfully created and online**. Jenkins can now 
 
 ---
 
+# 📘 GitHub + Jenkins Integration with Webhooks
 
+## 🧩 Objective
+
+To integrate **Jenkins** with **GitHub** using a **webhook** that triggers Jenkins pipelines when changes (like a push) are made to the `develop` branch in GitHub.
+
+---
+
+## 🗂️ Step-by-Step Breakdown
+
+### ✅ Step 1: Setting Up Local Git Repo
+
+1. **Create a Directory in Master Node**
+   ```bash
+   mkdir AWS1
+   cd AWS1
+   ```
+
+2. **Initialize Git**
+   ```bash
+   git init
+   ```
+
+3. **Create a File for Initial Commit**
+   ```bash
+   touch master_file
+   ```
+
+4. **Stage and Commit the File**
+   ```bash
+   git add .
+   git commit -m "master commit"
+   ```
+
+5. **Verify Git Status and Branch**
+   ```bash
+   git status
+   git branch
+   ```
+
+6. **Create and Switch to `develop` Branch**
+   ```bash
+   git branch develop
+   git checkout develop
+   ```
+
+7. **Create File for Develop Branch**
+   ```bash
+   touch develop_file
+   git add develop_file
+   git commit -m "commit for develop branch"
+   ```
+
+---
+
+### 🔗 Step 2: Create GitHub Repository and Link to Local Git
+
+1. **Create a New GitHub Repository**
+   - Go to GitHub
+   - Click on **New Repository**
+   - Name it (e.g. `jenkins-aws`)
+   - Keep it **Public**
+   - Click **Create Repository**
+
+2. **Add GitHub as Remote Origin**
+   ```bash
+   git remote add origin https://github.com/your-username/jenkins-aws.git
+   ```
+
+3. **Check Remote**
+   ```bash
+   git remote -v
+   ```
+
+4. **Push All Branches to GitHub**
+   ```bash
+   git push --all
+   ```
+
+> 📝 If asked for credentials, use a **Personal Access Token** instead of your GitHub password.
+
+---
+
+### 🔐 Step 3: Create GitHub Personal Access Token (PAT)
+
+1. Go to **GitHub → Settings → Developer Settings**
+2. Navigate to **Personal Access Tokens → Tokens (classic)**
+3. Click on **Generate new token**
+4. Provide:
+   - Note: _e.g., Jenkins token_
+   - Expiration: _90 days_
+   - Scopes: _Check all necessary permissions_
+5. **Copy and Save the Token** (you won't see it again!)
+
+---
+
+### 🔁 Step 4: Add Webhook in GitHub
+
+1. Go to your repository → **Settings → Webhooks**
+2. Click on **Add Webhook**
+3. Enter the Payload URL:
+   ```
+   http://<your-jenkins-ip>:8080/github-webhook/
+   ```
+4. Content Type: `application/json`
+5. Select **Just the push event**
+6. Click **Add Webhook**
+
+✅ You'll see a green checkmark if the webhook is correctly configured.
+
+---
+
+## 📦 Final Repo Structure
+
+```
+jenkins-aws/
+├── master_file        # For master branch
+└── develop_file       # For develop branch
+```
+
+---
+
+## 🧪 Validate Webhook
+
+- Make a change in the `develop` branch (e.g., edit `develop_file`)
+- Push to GitHub:
+  ```bash
+  git add .
+  git commit -m "test webhook"
+  git push origin develop
+  ```
+- Jenkins pipeline should be triggered (if configured to listen to GitHub webhooks).
+
+---
+
+## 📌 Notes
+
+- `ls -la` is used to show long list format with hidden files.
+- `rwx` permissions:
+  - `r`: read
+  - `w`: write
+  - `x`: execute
+- `git switch <branch>` is a modern alternative to `git checkout <branch>`
+
+---
+
+## 🙋 Common Questions
+
+**Q: What is the difference between GitHub and lab environments?**  
+A: GitHub is a cloud-based source code repository used for collaboration. A "lab" is usually a sandbox environment (often provided by training platforms) to practice hands-on tasks in a safe, isolated system.
+
+---

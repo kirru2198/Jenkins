@@ -32,6 +32,18 @@ This guide walks you through the steps to set up Jenkins on an AWS EC2 instance.
       sudo apt-get install openjdk-17-jdk
       ```
 
+```bash
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
+
+
+
 3. **Update System Repositories**:
     - Before installing Jenkins, update your system repositories to ensure you have the latest package information:
       ```bash

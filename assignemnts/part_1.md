@@ -249,3 +249,70 @@ Save the configuration.
 
 ---
 
+# 🔌 Jenkins Setup – Plugin Configuration
+
+---
+
+## 🔌 Plugin Installation – SSH Agent Plugin
+
+To create **nodes (agents)** in Jenkins, we need to install a **plugin** called:
+
+### ✅ SSH Agent Plugin
+
+---
+
+### 📍 Step-by-Step Installation:
+
+1. Navigate to:  
+   **Manage Jenkins → Plugin Manager**
+
+2. Click on the **Available** tab to search for new plugins.
+
+3. In the search bar, type:
+
+   ```plaintext
+   SSH Agent
+   ```
+
+4. Locate the **SSH Agent Plugin** from the list.
+
+5. Check the box next to it and click:
+
+---
+
+### 🟢 Plugin Installation Output
+
+- Jenkins shows the progress of installation.
+- You’ll see a `Success` message indicating the plugin is successfully installed.
+- If other plugins fail (e.g., dark theme plugin), that’s fine — they are optional.
+
+---
+
+### ✅ Verify Plugin Installation
+
+1. Go back to:  
+   **Manage Jenkins → Plugin Manager**
+
+2. Click the **Installed** tab.
+
+3. Search for:
+
+   ```plaintext
+   SSH Agent
+   ```
+
+4. You should see it listed with status **enabled**.
+
+---
+
+### 🔧 Plugin Management Options
+
+From the Installed tab, you can:
+- **Disable** a plugin temporarily
+- **Uninstall** it if it's no longer needed
+
+> ⚠️ Do not uninstall or disable **SSH Agent Plugin**, as it's essential for connecting nodes (agents) to the Jenkins master.
+
+---
+
+

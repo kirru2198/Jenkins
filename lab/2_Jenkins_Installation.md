@@ -1,7 +1,3 @@
-Sure! Here's a description of the steps for setting up Jenkins:
-
----
-
 # Jenkins Installation Guide
 
 This guide walks you through the steps to set up Jenkins on an AWS EC2 instance. You can follow these instructions for both Linux and Windows environments. For this guide, we focus on the Linux setup, but feel free to refer to the documentation for other platforms.

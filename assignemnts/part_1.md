@@ -1,4 +1,4 @@
-# 🌐 Jenkins Hands-On Session
+# 🌐 Jenkins Assignment_1
 
  We will:
 - Launch two EC2 instances (one **Master** and one **Slave**)

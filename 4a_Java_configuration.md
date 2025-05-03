@@ -1,5 +1,8 @@
 ### Setting Up Java for Jenkins: Step-by-Step Notes
 
+<img width="531" alt="image" src="https://github.com/user-attachments/assets/ca10ea6f-9b25-48f4-a9b5-48ae4d22b53a" />
+
+
 1. **Using Installed Java**:
    - Since Java is already installed on your system, you will specify which version to use (e.g., Java 17 or Java 11).
 

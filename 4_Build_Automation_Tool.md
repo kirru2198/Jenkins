@@ -5,6 +5,12 @@
   - **Maven** uses a **POM (Project Object Model)** file, which contains project details like directory structure, dependencies, and configuration.
   - **Maven** reads this file and ensures all necessary dependencies are downloaded automatically.
 
+### POM File Structure
+The `pom.xml` file contains:
+- Project information (name, version, etc.)
+- Dependencies required for the project.
+- Build configurations and plugins.
+
 ---
 
 ## Using Jenkins and Maven Together

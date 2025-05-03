@@ -41,6 +41,8 @@ Adding GitHub Credentials
 **Build Steps**
 
 <img width="557" alt="image" src="https://github.com/user-attachments/assets/8a2218cc-fc2d-441f-ad44-b28254ccc73f" />
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/6bbf1bd8-b4e6-408c-9241-ea966d2bd524" />
+
 
 **Post-build Actions**
 
@@ -58,3 +60,11 @@ Then Click on Save and Apply
 
 this is the Git-Hub Repository path
 
+<img width="647" alt="image" src="https://github.com/user-attachments/assets/684583a7-392d-4836-81cd-9cc211c37a50" />
+
+**Build Steps**
+
+<img width="674" alt="image" src="https://github.com/user-attachments/assets/e46e1ab1-2bf3-4bdc-b174-370c11c8d3ab" />
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/7986534d-41d8-4f3a-a961-3b84d48e832d" />
+
+after save and apply --- click on Build now 

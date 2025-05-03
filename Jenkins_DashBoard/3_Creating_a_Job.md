@@ -49,3 +49,12 @@ Adding GitHub Credentials
 ---
 
 Then Click on Save and Apply 
+
+
+---
+
+**Git-Hub Repository path**
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/fb537ddb-d956-4cb2-84ba-4630eeb3446c" />
+
+this is the Git-Hub Repository path
+

@@ -11,6 +11,14 @@ The `pom.xml` file contains:
 - Dependencies required for the project.
 - Build configurations and plugins.
 
+### **Development Process**:
+   - **Writing Code**: Developers start by writing the code.
+   - **Defining Build Process**: They then define how to compile, test, and package this code in the `POM.xml` file.
+   - **Compilation**: The build tool reads the `POM.xml` file to understand what is needed to compile the code and automatically handles the compilation process.
+   - **Testing**: After compilation, the tool checks the `POM.xml` for test cases and runs them to ensure the code works correctly.
+   - **Packaging**: Once testing is complete, the tool packages the code according to the instructions in the `POM.xml`.
+   - **Deployment**: Finally, the tool helps deploy the packaged code to the desired environment (like a virtual machine).
+     
 ---
 
 ## Using Jenkins and Maven Together

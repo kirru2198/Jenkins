@@ -12,5 +12,9 @@ Go to Manage Jenkins > Tools
 
 ### Java Configuration 
 
+<img width="824" alt="image" src="https://github.com/user-attachments/assets/0b556c5d-c261-4ffd-8e60-a440243abd4a" />
+
+
+
 - Java is already installed manually --- here we need to give the path to Java and in the machine we need to create a Path variable
 

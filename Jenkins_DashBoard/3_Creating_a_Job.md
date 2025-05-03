@@ -10,4 +10,7 @@ Go TO + New Iteam >
 
 Then, you will be directed to another page 
 
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/e82aa3fe-7c2e-4d61-9fd1-263e7179d260" />
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/d0680211-cd2a-47bf-b22a-9b526ffc56f5" />
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/e0fd8363-b29a-4197-ada0-915abd459ed6" />
 

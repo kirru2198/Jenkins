@@ -113,25 +113,6 @@ We will create small jobs to understand how **Jenkins** and **Maven** work toget
 
 ---
 
-## Future Sessions
 
-- In upcoming sessions, we will dive deeper into Jenkins with **Docker** and **Kubernetes** integration.
-- We will cover more Jenkins topics like user administration, various triggers, and integrating with **YAML** files.
 
----
-
-## Conclusion
-
-- After today's session, you should have a basic understanding of how **Jenkins** and **Maven** work together to automate the build process.
-- In tomorrow's session, we'll discuss **Build Triggers** and **Continuous Delivery (CD)**, and work on a real-world project with CI/CD, including Git deployment.
-
----
-
-## Resources
-
-- All session materials will be available on my **GitHub**.
-- Search for **"Discover DevOps GitHub"** to find the resources, including AWS, S3, and more.
-- The GitHub repository will be regularly updated with additional resources as we progress through the course.
-
----
 

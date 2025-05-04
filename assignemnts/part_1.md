@@ -129,53 +129,6 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 ---
 
-## 🧩 Install Suggested Plugins
-
-Click:
-> **Install suggested plugins**
-
-✅ Wait for the following plugins:
-- Git
-- Pipeline
-- Gradle
-- LDAP
-- Many more...
-
----
-
-## 👤 Create First Admin User
-
-Fill out the form:
-- **Username**: paric
-- **Password**: [YourPassword]
-- **Full Name**: Paric
-- **Email**: your_email@domain.com
-
-Click:
-> **Save and Continue**
-
----
-
-## ✅ Finalize Setup
-
-- Confirm Jenkins is accessible at `http://<IP>:8080`
-- Click: **Start using Jenkins**
-
----
-## 🖥️ Jenkins Dashboard Overview
-
-Once setup is complete, you’ll land on the Jenkins dashboard.
-
-### Main Sections:
-
-- **New Item**: Create new jobs/pipelines
-- **Build History**: Past builds list
-- **Manage Jenkins**: Admin settings
-- **Build Queue**: Active or queued jobs
-- **User Info**: Top-right corner
-
----
-
 ## Configure Jenkins Settings
 
 Navigate to:  

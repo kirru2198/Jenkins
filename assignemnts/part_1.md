@@ -539,7 +539,7 @@ This assignment involves creating a **freestyle project** (Job) in Jenkins, pull
 
 - Select **Git**.
 - Enter the Git repository URL.
-- Add/select credentials (e.g., SSH key or token).
+- Add/select credentials (e.g., SSH key or token). # select **Ubuntu** which was created earlier
 - In **Branch to build**, use:  
   ```
   */develop

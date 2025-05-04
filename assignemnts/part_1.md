@@ -427,7 +427,7 @@ To integrate **Jenkins** with **GitHub** using a **webhook** that triggers Jenki
 
 1. Go to **GitHub → Settings → Developer Settings**
 2. Navigate to **Personal Access Tokens → Tokens (classic)**
-3. Click on **Generate new token**
+3. Click on **Generate new token (General)**
 4. Provide:
    - Note: _e.g., Jenkins token_
    - Expiration: _90 days_

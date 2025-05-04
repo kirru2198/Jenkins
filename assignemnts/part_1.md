@@ -72,12 +72,6 @@
 - **Two Instances**:
   - `jenkins-master`
   - `jenkins-slave-1`
-- **AMI**: Ubuntu 22.04 (more stable than 24.04)
-- **Instance Type**: `t2.micro`
-- **Security Group**: Allow **All Traffic** (Inbound rule: `Anywhere (0.0.0.0/0)`)
-- **Storage Configuration**: default
-
-> ⚠️ **Important**: Refresh EC2 dashboard until `2/2 status checks passed` before connecting.
 
 ---
 

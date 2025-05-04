@@ -1,5 +1,10 @@
 # 🌐 Jenkins Assignment_1
 
+ Tasks To Be Performed:
+ 1. Trigger a pipeline using Git when push on develop branch
+ 2. Pipeline should pull Git content to a folder
+
+---
  We will:
 - Launch two EC2 instances (one **Master** and one **Slave**)
 - Install Jenkins

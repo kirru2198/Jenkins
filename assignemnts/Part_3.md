@@ -1,5 +1,11 @@
 # 📘 Assignment 3: Jenkins Build Pipeline Overview
 
+Tasks To Be Performed:
+ 1. Create a pipeline in Jenkins
+ 2. Once push is made to “develop” a branch in Git, trigger job “test”. This will copy Git files to test node
+ 3. If test job is successful, then prod job should be triggered
+ 4. Prod jobs should copy files to prod node
+
 ## ✅ Objective:
 The goal of Assignment 3 is to **create and visualize a Jenkins pipeline** using the **Build Pipeline Plugin**. This will help you understand how different Jenkins jobs can be chained and visualized in a flow.
 

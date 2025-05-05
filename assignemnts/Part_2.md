@@ -61,7 +61,7 @@ Create a Jenkins setup with:
 
 #### Source Code Management:
 - **Git**: Add GitHub repo URL
-- **Branch to build**: `test`
+- **Branch to build**: `prod`
 
 #### Build Triggers:
 - ✅ GitHub hook trigger for GITScm polling
@@ -72,14 +72,16 @@ Create a Jenkins setup with:
 
 ### ✅ Actions on Jenkins Master Terminal:
 ```bash
-git checkout -b test          # create and switch to test branch
-touch test_file.txt
-git add test_file.txt
-git commit -m "test file added"
-git push origin test          # Important! This pushes to GitHub
+git branch
+git checkout master
+git checkout -b prod          # create and switch to test branch
+touch prod_file.txt
+git add prod_file.txt
+git commit -m "prod file added"
+git push origin prod          # Important! This pushes to GitHub
 ```
 
-> 🔎 Confirm that `test` branch appears on GitHub
+> 🔎 Confirm that `prod` branch appears on GitHub
 
 ---
 
@@ -96,7 +98,7 @@ cd /home/ubuntu/jenkins/workspace/push-to-prod
 ls
 ```
 
-✅ You should see the files from the `test` branch (`test_file.txt`)
+✅ You should see the files from the `prod` branch (`prod_file.txt`)
 
 ---
 
@@ -118,7 +120,7 @@ ls
 | Jenkins Master   | 1 Instance                |
 | Slave Nodes      | Node1, Node2              |
 | Jobs Created     | `push-to-test`, `push-to-prod` |
-| Branches Used    | `develop`, `test`, `master`     |
+| Branches Used    | `develop`, `prod`, `master`     |
 | Trigger Type     | GitHub webhook            |
 
 ---

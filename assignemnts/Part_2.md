@@ -3,9 +3,8 @@
  Tasks To Be Performed:
  1. Add 2 nodes to Jenkins master
  2. Create 2 jobs with the following jobs:
- 
- a. Push to test
- b. Push to prod
+ * a. Push to test
+ * b. Push to prod
  
  3. Once a push is made to test branch, copy Git files to test server
  4. Once a push is made to master branch, copy Git files to prod server

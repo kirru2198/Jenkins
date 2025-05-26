@@ -1,42 +1,5 @@
 # Continuous Integration and Continuous Delivery (CI/CD) with Jenkins
 
-## Recap of What We've Covered
-
-### 1. **Continuous Integration (CI)**
-   - **CI** is a development practice that requires developers to merge code into the main branch regularly.
-   - By integrating frequently, problems are caught early, making it easier to maintain code quality.
-
-### 2. **Continuous Delivery (CD)**
-   - **CD** involves the automated delivery of code into production. 
-   - **Continuous Delivery** requires manual approval for deployment, while **Continuous Deployment** automatically deploys the code into production without human intervention.
-
-### 3. **Jenkins Setup**
-   - We installed Jenkins on a server and resolved a **Java version compatibility issue** (Java 11 did not work, but Java 17 did).
-   - Jenkins was configured to create jobs for compiling, testing, and packaging.
-
-### 4. **Jenkins Pipeline**
-   - We created a **Jenkins Pipeline** where:
-     - **GitHub Webhook** triggers the build process (compile → test → package).
-   - We learned about **upstream and downstream jobs**, where jobs are triggered automatically based on success or failure.
-
-### 5. **Jenkins Master-Slave Architecture**
-   - The **Master-Slave** architecture helps distribute workloads. 
-   - The **Master** controls the Jenkins instance, and the **Slave** executes the actual jobs.
-   - We configured **passwordless SSH** between the master and slave servers for smooth communication.
-
-### 6. **Passwordless SSH Setup**
-   - We generated **SSH keys** on the master server and copied the public key to the slave server.
-   - This setup enables Jenkins to communicate with the slave server without needing a password each time.
-
-### 7. **Adding Slave Servers to Jenkins**
-   - We added slave servers to Jenkins via the **Manage Jenkins → Manage Nodes → New Node** interface.
-   - We used **labels** to direct jobs to specific slave servers.
-
-### 8. **Running Jobs on Slaves**
-   - Jobs were successfully run on slave servers, ensuring efficient resource utilization and distribution of work.
-
----
-
 ## What's Next?
 
 Now, we will set up a **Continuous Integration and Continuous Delivery (CI/CD)** pipeline using a real-world project. We will manually configure each step, test it, and automate the process with Jenkins.

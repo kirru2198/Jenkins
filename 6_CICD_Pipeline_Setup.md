@@ -8,6 +8,10 @@
   - **Compile** has no upstream jobs but has downstream jobs like **Test** and **Package**.
   - **Test** depends on **Compile** and triggers **Package** as its downstream job.
 
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/d0680211-cd2a-47bf-b22a-9b526ffc56f5" />
+
+---
+
 ### Managing Multiple Teams and Machines
 - **Resource Management**: Multiple teams might want to run their jobs on different machines, especially when the Jenkins server becomes resource-constrained (e.g., CPU/RAM limitations).
 - **Master-Slave Architecture**: We implemented a master-slave setup where the **Master server** controls the job triggers, and the **Slave server** runs the jobs.

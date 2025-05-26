@@ -12,8 +12,6 @@ Now, we will set up a **Continuous Integration and Continuous Delivery (CI/CD)**
    - **Maven**:
      - How to use **Maven** for packaging and deploying Java projects (which Jenkins will automate for us).
 
-If there are specific parts of Git or Jenkins that you’d like to dive deeper into, feel free to ask!
-
 ---
 
 ### Important Note:

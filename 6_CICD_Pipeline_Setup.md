@@ -1,14 +1,4 @@
 # CI/CD Pipeline Setup and Jenkins Master-Slave Architecture
-
-## Recap of the Previous Work
-
-### CI/CD Pipeline Creation
-
-- **Initial Setup**: We began by setting up a Continuous Integration/Continuous Deployment (CI/CD) pipeline. The process starts when a developer writes code and pushes it to a GitHub repository.
-- **Jenkins Setup**: Jenkins is configured on a Linux server, and we created two key jobs: **Compile** and **Test**.
-  - **Compile Job Configuration**:
-    - The GitHub repository is linked to Jenkins as the source of the code.
-    - Build triggers like **GitHub Webhook** are used to automatically trigger jobs when new commits are pushed. Other options such as **Build periodically** and **Poll SCM** are also available, but GitHub Webhook is the best choice for automatic triggering.
   
 ### Test Job Configuration
 - **Sequential Execution**: The **Test Job** is set to run only after the **Compile Job** completes successfully. 

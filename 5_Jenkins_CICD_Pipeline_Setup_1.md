@@ -12,6 +12,9 @@
 
 This ensures that Jenkins always uses the latest code from the specified branch for building and testing.
 
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/d0680211-cd2a-47bf-b22a-9b526ffc56f5" />
+
+
 ### 1.2. Build Step
 - **Purpose**: The build step is where Jenkins compiles the code and creates a build artifact.
 - **Steps**:

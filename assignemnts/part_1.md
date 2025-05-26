@@ -271,6 +271,9 @@ Here's the full configuration breakdown:
 | **Launch method**        | `Launch agents via SSH`                                                             |
 | **Host**                 | Private IP of your slave machine (e.g., AWS EC2 instance)                           |
 
+
+<img width="923" alt="image" src="https://github.com/user-attachments/assets/eb69cedb-728b-4924-9f06-2a4677fc91dd" />
+
 ---
 
 ### 🔹 Step 4: Add SSH Credentials

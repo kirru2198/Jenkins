@@ -272,7 +272,7 @@ Here's the full configuration breakdown:
 | **Host**                 | Private IP of your slave machine (e.g., AWS EC2 instance)                           |
 
 
-<img width="923" alt="image" src="https://github.com/user-attachments/assets/eb69cedb-728b-4924-9f06-2a4677fc91dd" />
+<img width="857" alt="image" src="https://github.com/user-attachments/assets/39935344-b0f3-418c-856f-5abe5ed02c16" />
 
 ---
 

@@ -24,30 +24,10 @@
 
 ---
 
-### SSH Key Setup for Passwordless Connection
-- **Passwordless SSH Setup**: We configured passwordless SSH access between the master and slave machines to enable seamless communication between them.
-  - **Generate SSH Key**: Use `ssh-keygen` to create an SSH key pair (public and private keys).
-  - **Copy the Public Key**: Use `cat` or `ssh-copy-id` to copy the public key from the master to the slave, placing it in the slave's `~/.ssh/authorized_keys` file.
-  - **Test SSH Connection**: Ensure passwordless SSH is working by running `ssh slave-ip` from the master.
-
-### Jenkins Plugin Updates
-- **Plugin Maintenance**: We discussed the importance of updating Jenkins plugins, but also ensuring the updates are tested on a development server before being applied to production.
-
 ### Pipeline as Code
 - **Declarative Pipelines**: In a real-world scenario, it is better to define Jenkins pipelines as code, typically in YAML or similar formats. This ensures the job configuration is codified and easily version-controlled.
 
 ---
-
-## Master-Slave Architecture
-
-### Understanding Master-Slave Setup
-- **Master Server**: The master Jenkins server controls the jobs, triggering them based on conditions and available resources.
-- **Slave Server**: The slave executes the jobs assigned by the master. This helps offload the resource burden from the master.
-
-### Passwordless SSH Setup for Master-Slave Connection
-1. **Generate SSH Keys** on the master.
-2. **Copy the public key** to the slave’s `~/.ssh/authorized_keys` file.
-3. **Verify SSH Authentication** by running `ssh slave-ip` from the master.
 
 ### Adding Slave Node in Jenkins
 1. **Access Jenkins Dashboard**: Navigate to **Manage Jenkins → Manage Nodes**.
@@ -60,12 +40,8 @@
    
 3. **Test Connection**: After saving the configuration, Jenkins should show the slave as **online**. If it doesn't, troubleshoot by verifying the SSH connection and Java installation on the slave.
 
-### Java Version Compatibility
-- **Issue**: The Jenkins master was running **Java 17**, while the slave was running **Java 11**.
-- **Solution**: Install Java 17 on the slave and reboot the system.
-- **Result**: The slave agent successfully connected after resolving the Java version mismatch.
-
 ---
+
 
 ## Running Jobs on Slave Server
 
@@ -86,25 +62,5 @@
 
 ---
 
-## Session Wrap-Up
 
-- **Review**: We have covered the basics of Jenkins setup, including the creation of jobs, master-slave architecture, SSH key configuration, and managing resources across multiple machines.
-- **Next Steps**: On **Tuesday**, we will continue hands-on work, including:
-  - CI/CD Jobs.
-  - Jenkins administration tasks (e.g., user management).
-  - Introduction to **Docker** and **Kubernetes**.
-
----
-
-## Rest and Final Thoughts
-- **Instructor's Rest**: After a long session, the instructor needs some rest but assures the class that the next session will be even more engaging and filled with energy.
-- **Stay Tuned**: On **Tuesday**, we will dive deeper into CI/CD pipelines, explore Jenkins in more detail, and introduce Docker and Kubernetes concepts for containerization and orchestration.
-
----
-
-### Key Concepts:
-- **Master-Slave Architecture**: Ensures Jenkins can scale and manage multiple teams and jobs.
-- **Passwordless SSH**: Facilitates seamless communication between the master and slave without requiring password authentication.
-- **Job Execution on Slave**: Allows offloading resource-heavy tasks from the master to a dedicated slave machine.
-- **Workspace**: Defines the location where job files and data are stored during execution.
 

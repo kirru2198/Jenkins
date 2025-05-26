@@ -155,6 +155,9 @@ This allows Jenkins agents (slaves) to connect.
 
 Save the configuration.
 
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/66817478-86a9-4fb1-b15e-f20760b176f6" />
+
+
 ---
 
 # 🔌 Jenkins Setup – Plugin Configuration

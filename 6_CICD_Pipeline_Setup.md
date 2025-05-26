@@ -22,6 +22,8 @@
 - **Resource Management**: Multiple teams might want to run their jobs on different machines, especially when the Jenkins server becomes resource-constrained (e.g., CPU/RAM limitations).
 - **Master-Slave Architecture**: We implemented a master-slave setup where the **Master server** controls the job triggers, and the **Slave server** runs the jobs.
 
+---
+
 ### SSH Key Setup for Passwordless Connection
 - **Passwordless SSH Setup**: We configured passwordless SSH access between the master and slave machines to enable seamless communication between them.
   - **Generate SSH Key**: Use `ssh-keygen` to create an SSH key pair (public and private keys).
@@ -33,7 +35,7 @@
 
 ### Pipeline as Code
 - **Declarative Pipelines**: In a real-world scenario, it is better to define Jenkins pipelines as code, typically in YAML or similar formats. This ensures the job configuration is codified and easily version-controlled.
-  
+
 ---
 
 ## Master-Slave Architecture

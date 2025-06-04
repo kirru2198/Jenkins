@@ -94,3 +94,5 @@ If you're unable to complete this assignment:
 > Great job completing Assignments 1 and 2! Assignment 3 is a visual wrap-up of your automation workflow. You're one step closer to mastering Jenkins pipelines. Keep going! 🚀
 
 ---
+
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/1192e77b-938a-4670-baf8-88bf6501a11a" />
